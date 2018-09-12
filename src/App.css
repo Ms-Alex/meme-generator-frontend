@@ -1,0 +1,184 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+body {
+  background: rgb(243, 255, 242);
+}
+
+h1, .brand-logo {
+  font-family: 'Righteous', cursive;
+}
+
+div {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+h2, h3, .brand-logo {
+  margin-left: 3%;
+}
+
+.login-form {
+  background: rgb(223, 117, 118);
+  padding: 20px;
+  margin-top: 10%;
+  border: 15px dotted black;
+}
+
+.welcome-hr {
+  border-top: 3px double #8c8b8b;
+}
+
+
+.edit-delete {
+  top: 98%;
+}
+
+.profile-render-butts{
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+}
+
+
+/* FOR THE MEME FORM */
+.img-preview {
+  position: relative;
+  text-align: center;
+  width: 38%;
+  height: 46%;
+  float: left ;
+  margin-left: 100px;
+  border: 2px;
+}
+
+.img-form {
+  float: left;
+  width: 35%;
+  height: 50%;
+  margin-left: 50px;
+  border-left: 2px solid black;
+  padding-left: 50px;
+}
+
+.selected-img {
+  position: relative;
+}
+
+.top-txt-img, .bottom-txt-img {
+  position: absolute;
+  vertical-align: top;
+  padding: 2px;
+  
+  border-width: 2px;
+  resize: none;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1.15em;
+  text-shadow: 0 0 13px black, 0 0 15px black;
+}
+
+.top-txt-img {
+  top: 1%;
+  left: 15%;
+  width: 63%;
+  height: 44px;
+
+}
+
+.bottom-txt-img {
+  top: 72%;
+  left: 15%;
+  width: 63%;
+  height: 44px;
+}
+
+
+
+/* MEME CARD */
+.meme-card {
+  /* float: left; */
+  position: relative;
+  text-align: center;
+
+  /* overflow: auto; */
+  /* padding-left: 5%; */
+
+}
+
+
+/* FOR MEMES CONTAINER */
+.memes-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.memes-container .meme-card {
+  width: 80%;
+  height: 45%;
+  margin: 5% 10%;
+  flex: 0 100%;
+}
+
+/* FOR MY-MEMES  */
+.my-memes, .faves-memes {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.my-memes .meme-card {
+  height: 40%;
+  width: 50%;
+  flex: 0 28%;
+  margin: 3% 5%;
+}
+
+/* FAVES MEMES */
+.faves-memes .meme-card {
+  height: 40%;
+  width: 50%;
+  flex: 0 28%;
+  margin: 3% 5%;
+}
+
+/* FIX SHOW TEXTS */
+.memes-container .meme-card .top-txt-img {
+  top: 1%;
+  left: 15%;
+}
+
+.memes-container > .bottom-txt-img {
+  top: 90%;
+  left: 15%;
+  /* width: 63%;
+  height: 44px; */
+}
+
+
+/* IMAGE SELECTION FOR FORM */
+  .wrapper{
+    height: 80px;
+    overflow: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin: 10px 0 -10px;
+ }
+ .wrapper .selection{
+   width:150px;
+   border:1px solid #ccc
+ }
+
+ .img-selection {
+   display: inline-block;
+    width: 60px;
+    height: 60px;
+    border-right: 3px solid #fff;
+ }
