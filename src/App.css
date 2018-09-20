@@ -117,6 +117,7 @@ h2, h3, .brand-logo {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .memes-container .meme-card {
