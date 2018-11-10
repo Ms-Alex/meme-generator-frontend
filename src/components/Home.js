@@ -2,6 +2,7 @@ import React from 'react';
 import ImgCard from './ImgCard'
 import Filter from './Filter'
 import generateAdapter from '../Adapter'
+import M from 'materialize-css'
 
 const memesAPI = 'http://localhost:4000/api/v1/memes'
 // const usersAPI = 'http://localhost:4000/api/v1/users'
@@ -48,10 +49,14 @@ class Home extends React.Component {
         let faveExists = this.state.allFaves.find(fave => fave.meme.id === parseInt(meme.id) && fave.user.id === this.state.currentUser.id)
 
         if (faveExists){
-            alert("💁🏻‍ Already in your faves 💁🏻‍")
+            // alert("💁🏻‍ Already in your faves 💁🏻‍")
+            M.toast({ html: "Already in your faves" });
         } else {
             generateAdapter(favesAPI).create({user_id: this.state.currentUser.id, meme_id: meme.id}, () => this.componentDidMount())
-            alert("🧚 Successfully added! 🧚 ‍")
+            // alert("🧚 Successfully added! 🧚 ‍")
+            M.toast({
+                html: "Successfully added! "
+            });
         }
     }
 

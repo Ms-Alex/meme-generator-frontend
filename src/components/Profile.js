@@ -3,6 +3,7 @@ import React from 'react';
 import ImgCard from './ImgCard';
 import generateAdapter from '../Adapter'
 // import EditMeme from './EditMeme'
+import M from 'materialize-css'
 
 const usersAPI = 'http://localhost:4000/api/v1/users'
 const memesAPI = 'http://localhost:4000/api/v1/memes'
@@ -80,6 +81,7 @@ class Profile extends React.Component {
 
     removeDeletedMeme = (id) => {
         let withoutMeme = this.state.myMemes.filter(meme => meme.id !== parseInt(id))
+        M.toast({ html: "Successfully deleted!" });
         this.setState({
             myMemes: withoutMeme
         }, () => this.deleteMeme(id))
@@ -91,7 +93,8 @@ class Profile extends React.Component {
 
     handleRemove = (event) => {
         generateAdapter(favesAPI).toDelete(event.target.dataset.faveId)
-        alert("💁🏻‍ Successfully removed! 💁🏻‍")
+        // alert("💁🏻‍ Successfully removed! 💁🏻‍")
+        M.toast({ html: "Successfully removed!" });
         this.componentDidMount()
     }
 
@@ -157,10 +160,10 @@ class Profile extends React.Component {
 
                 <div className="profile-render-butts">
                     <button className="waves-effect waves-light btn-small" data-type="all" onClick={this.handleRenderClick}>
-                        View All
+                        View Yours
                     </button>  &emsp;&emsp;
                     <button className="waves-effect waves-light btn-small" data-type="faves" onClick={this.handleRenderClick}>
-                            View Faves
+                        View Faves
                     </button>
                 </div>
 

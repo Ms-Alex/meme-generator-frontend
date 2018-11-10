@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import generateAdapter from '../Adapter'
 import ImgCard from './ImgCard'
+import M from 'materialize-css';
 
 const imagesAPI = 'https://api.imgflip.com/get_memes'
 const memesAPI = 'http://localhost:4000/api/v1/memes'
@@ -55,9 +56,12 @@ class AddMeme extends React.Component {
         event.preventDefault();
 
         this.createMeme();
-        alert("🧚 Successfully created! Click on Logo or your profile. 🧚")
+        // alert("🧚 Successfully created! Click on Logo or your profile. 🧚")
+        M.toast({
+            html: "Successfully created! <br />Click on Logo or your profile. "
+        });
 
-        return <Redirect to="/profile" />
+        return <Redirect to="/main" />
     }
 
     createMeme = () => {

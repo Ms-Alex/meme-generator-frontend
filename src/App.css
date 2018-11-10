@@ -116,8 +116,9 @@ h2, h3, .brand-logo {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  flex-wrap: wrap-reverse;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
 }
 
 .memes-container .meme-card {
@@ -127,28 +128,24 @@ h2, h3, .brand-logo {
   flex: 0 100%;
 }
 
-/* FOR MY-MEMES  */
+/* FOR MY-MEMES  & FAVES */
 .my-memes, .faves-memes {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row-reverse;
+  flex-wrap: wrap-reverse;
+  justify-content: flex-end;
 }
 
-.my-memes .meme-card {
+.my-memes .meme-card, .faves-memes .meme-card {
   height: 40%;
   width: 50%;
   flex: 0 28%;
   margin: 3% 5%;
 }
 
-/* FAVES MEMES */
-.faves-memes .meme-card {
-  height: 40%;
-  width: 50%;
-  flex: 0 28%;
-  margin: 3% 5%;
-}
+
 
 /* FIX SHOW TEXTS */
 .memes-container .meme-card .top-txt-img {
